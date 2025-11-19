@@ -1,0 +1,161 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Calidad Siembra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen>
+
+      <form [formGroup]="ConsultarPlotCalidad">
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plot Id</ion-label>
+            <ion-input type="number" name="Numplot" id="PlotId" formControlName="Numplot"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Ubicación</ion-label>
+            <ion-input type="number" name="Ubicacion" id="Ubicacion" formControlName="Ubicacion"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <section class="full-width">
+            <ion-button expand="full" color="secondary" (click)="CalificarSimebra()" [disabled]="ConsultarPlotCalidad.invalid">Ver detalles</ion-button>
+          </section>
+        </ion-card>
+      </form>
+
+      <ion-card *ngIf="ocultar1">
+        <form [formGroup]="FormUpdateSiembra">
+          <ion-card-header>
+            <ion-card-title CLASS="ion-text-center"> SEMBRADORES</ion-card-title>
+          </ion-card-header>
+          <ion-footer>
+
+            <ion-row *ngIf="divoper1">
+              <ion-item>
+                <ion-col center text-center>
+                  <ion-item>
+                    <ion-label position="floating">CODIGO</ion-label>
+                    <ion-input type="hidden" name="idOper1" id="idOper1" formControlName="idOper1"></ion-input>
+                    <ion-input disabled="true" name="Oper1" id="Oper1" formControlName="Oper1"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-item>
+                  <ion-col center text-center>
+                    <ion-label position="floating">CALIFICACION</ion-label>
+                    <ion-select interface="popover" name="CalificacionOper1" id="CalificacionOper1" formControlName="CalificacionOper1">
+                      <ion-select-option value="1">1</ion-select-option>
+                      <ion-select-option value="2">2</ion-select-option>
+                      <ion-select-option value="3">3</ion-select-option>
+                      <ion-select-option value="4">4</ion-select-option>
+                      <ion-select-option value="5">5</ion-select-option>
+                    </ion-select>
+                  </ion-col>
+                </ion-item>
+              </ion-item>
+            </ion-row>
+
+            <ion-row *ngIf="divoper2">
+              <ion-item>
+                <ion-col center text-center>
+                  <ion-item>
+                    <ion-label position="floating">CODIGO</ion-label>
+                    <ion-input type="hidden" name="idOper2" id="idOper2" formControlName="idOper2"></ion-input>
+                    <ion-input disabled="true" name="Oper2" id="Oper2" formControlName="Oper2"></ion-input>
+
+                  </ion-item>
+                </ion-col>
+                <ion-item>
+                  <ion-col center text-center>
+                    <ion-label position="floating">CALIFICACION</ion-label>
+                    <ion-select interface="popover" name="CalificacionOper2" id="CalificacionOper2" formControlName="CalificacionOper2">
+                      <ion-select-option value="1">1</ion-select-option>
+                      <ion-select-option value="2">2</ion-select-option>
+                      <ion-select-option value="3">3</ion-select-option>
+                      <ion-select-option value="4">4</ion-select-option>
+                      <ion-select-option value="5">5</ion-select-option>
+                    </ion-select>
+                  </ion-col>
+                </ion-item>
+              </ion-item>
+            </ion-row>
+
+            <ion-row *ngIf="divoper3">
+              <ion-item>
+                <ion-col center text-center>
+                  <ion-item>
+                    <ion-label position="floating">CODIGO</ion-label>
+                    <ion-input type="hidden" name="idOper3" id="idOper3" formControlName="idOper3"></ion-input>
+                    <ion-input disabled="true" name="Oper3" id="Oper3" formControlName="Oper3"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-item>
+                  <ion-col center text-center>
+                    <ion-label position="floating">CALIFICACION</ion-label>
+                    <ion-select interface="popover" name="CalificacionOper3" id="CalificacionOper3" formControlName="CalificacionOper3">
+                      <ion-select-option value="1">1</ion-select-option>
+                      <ion-select-option value="2">2</ion-select-option>
+                      <ion-select-option value="3">3</ion-select-option>
+                      <ion-select-option value="4">4</ion-select-option>
+                      <ion-select-option value="5">5</ion-select-option>
+                    </ion-select>
+                  </ion-col>
+                </ion-item>
+              </ion-item>
+            </ion-row>
+
+            <ion-row *ngIf="divoper4">
+              <ion-item>
+                <ion-col center text-center>
+                  <ion-item>
+                    <ion-label position="floating">CODIGO</ion-label>
+                    <ion-input disabled="true" name="Oper4" id="Oper4" formControlName="Oper4"></ion-input>
+                    <ion-input type="hidden" name="idOper4" id="idOper4" formControlName="idOper4"></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-item>
+                  <ion-col center text-center>
+                    <ion-label position="floating">CALIFICACION</ion-label>
+                    <ion-select interface="popover" name="CalificacionOper4" id="CalificacionOper4" formControlName="CalificacionOper4">
+                      <ion-select-option value="1">1</ion-select-option>
+                      <ion-select-option value="2">2</ion-select-option>
+                      <ion-select-option value="3">3</ion-select-option>
+                      <ion-select-option value="4">4</ion-select-option>
+                      <ion-select-option value="5">5</ion-select-option>
+                    </ion-select>
+                  </ion-col>
+                </ion-item>
+              </ion-item>
+            </ion-row>
+            <ion-card>
+              <section class="full-width">
+                <ion-button expand="full" color="success" (click)="GuardarCalificacion()">Guardar Calificación</ion-button>
+              </section>
+            </ion-card>
+          </ion-footer>
+
+
+
+
+
+
+        </form>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+</ion-content>

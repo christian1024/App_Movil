@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pageprueba</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<!--  <ion-grid>
+    <ion-row *ngFor="let materia of productList">
+      <ion-col>
+        viaje = {{materia.NumViaje}}
+      </ion-col>
+      <ion-col>
+        plantas = {{materia.Plantas}}
+      </ion-col>
+      <ion-col>
+        plotid = {{materia.PlotID}}
+      </ion-col>
+      <ion-col>
+        operario = {{materia.Operariosiembra}}
+      </ion-col>
+      <ion-col>
+        fecha hora = {{materia.Create_at}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>-->
+
+  <ion-grid>
+    <ion-row *ngFor="let materia of productList">
+      <ion-col> PlotID = {{materia.PlotID}}</ion-col>
+      <ion-col> PlantasSembradas = {{materia.PlantasSembradas}}</ion-col>
+      <ion-col> ubicacion = {{materia.ubicacion}}</ion-col>
+      <ion-col> Raiz = {{materia.Raiz}}</ion-col>
+      <ion-col> Cono = {{materia.Cono}}</ion-col>
+      <ion-col> Pinch = {{materia.Pinch}}</ion-col>
+      <ion-col> Faltante = {{materia.Faltante}}</ion-col>
+      <ion-col> Otro = {{materia.Otro}}</ion-col>
+      <ion-col> CausalOtros = {{materia.CausalOtros}}</ion-col>
+      <ion-col> CodigoConfirmacion = {{materia.CodigoConfirmacion}}</ion-col>
+      <ion-col> Observacion = {{materia.Observacion}}</ion-col>
+      <ion-col> Create_at = {{materia.Create_at}}</ion-col>
+      <ion-col> Update_at = {{materia.Update_at}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<ion-grid>
+    <ion-row *ngFor="let materia of productList">
+      <ion-col>PlotID = {{materia.PlotID}}</ion-col>
+      <ion-col>ubicacion = {{materia.ubicacion}}</ion-col>
+      <ion-col>Operario = {{materia.Operario}}</ion-col>
+      <ion-col>Calificacion = {{materia.Calificacion}}</ion-col>
+    </ion-row>
+  </ion-grid>-->
+
+</ion-content>

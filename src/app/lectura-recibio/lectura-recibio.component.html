@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lectura Recibido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content fullscreen>
+      <form [formGroup]="FormCrearRe">
+        <ion-card>
+          <ion-item>
+            <ion-label># Viaje</ion-label>
+            <ion-input value="{{ Radicado }}" formControlName="Numviaje" disabled="true"></ion-input>
+
+            <ion-button (click)="NumeroViaje()">MAS UNO</ion-button>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plot Id</ion-label>
+            <ion-input type="number" name="Numplot" id="Numplot" formControlName="Numplot" (change)="PlotExiste()"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plantas</ion-label>
+            <ion-input type="number" name="Numplantas" id="Numplantas" formControlName="Numplantas"></ion-input>
+            <ion-icon name="leaf-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Operarios Siembra</ion-label>
+            <ion-input type="number" name="CodOper" id="CodOper" formControlName="CodOper"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <section class="full-width">
+            <ion-button expand="full" ion-button full color="success" (click)="crearRecibido()" [disabled]="FormCrearRe.invalid">GUARDAR</ion-button>
+          </section>
+        </ion-card>
+      </form>
+
+     <!-- <form [formGroup]="FormCrearRe">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title CLASS="ion-text-center"> ULTIMA lECTURA</ion-card-title>
+          </ion-card-header>
+          <ion-footer>
+            <ion-row>
+              <ion-col center text-center>
+                <button>
+                  <ion-label position="floating">Plot Id</ion-label>
+                  <ion-input disabled="true"></ion-input>
+                </button>
+              </ion-col>
+              <ion-col center text-center>
+                <button>
+                  <ion-label position="floating">Plantas</ion-label>
+                  <ion-input disabled="true" ></ion-input>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-footer>
+        </ion-card>
+      </form>-->
+
+    </ion-content>
+  </ion-app>
+</ion-content>

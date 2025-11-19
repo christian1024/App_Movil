@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Confirmación Siembra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    ,
+    <ion-content fullscreen>
+      <form [formGroup]="FromConfirmacion">
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plot Id</ion-label>
+            <ion-input type="number" name="PlotId" id="PlotId" formControlName="PlotId"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Codigo Confirmacion</ion-label>
+            <ion-input type="number" name="Codigo" id="Codigo" formControlName="Codigo"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Ubicación</ion-label>
+            <ion-input type="number" name="Ubicacion" id="Ubicacion" formControlName="Ubicacion"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plantas Confirmadas</ion-label>
+            <ion-input type="number" name="Plantas" id="Plantas" formControlName="Plantas"></ion-input>
+            <ion-icon name="leaf-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">COMENTARIO</ion-label>
+            <ion-icon name="book-outline" slot="end"></ion-icon>
+            <ion-textarea  name="Comentario" id="Comentario" formControlName="Comentario">
+            </ion-textarea>
+          </ion-item>
+
+        </ion-card>
+
+        <ion-card>
+          <section class="full-width">
+            <ion-button expand="full" color="success" (click)="GuardarConfirmacionSimebra()">GUARDAR</ion-button>
+          </section>
+        </ion-card>
+      </form>
+    </ion-content>
+
+  </ion-app>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Siembras</ion-list-header>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header class="ion-text-center">Sincronización</ion-list-header>
+          <ion-item lines="none">
+
+            <ion-list>
+              <ion-item>
+                <section class="full-width">
+                  <ion-button expand="full" color="secondary"  (click)="paginaprueba()" routerDirection="forward">
+                    <ion-icon name="arrow-down-circle-outline" ></ion-icon>
+                    DESCARGAR INFORMACION</ion-button>
+                </section>
+              </ion-item>
+              <ion-item>
+                <section class="full-width">
+                  <ion-button expand="full" color="danger" (click)="Limpiartablas()">
+                    <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                    LIMPIAR DATOS</ion-button>
+                </section>
+              </ion-item>
+              <ion-item>
+                <section class="full-width">
+                  <ion-button expand="full" color="danger" (click)="EvnviarDatos()">
+                    <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                    ENVIAR DATOS</ion-button>
+                </section>
+              </ion-item>
+
+            </ion-list>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content">aa</ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

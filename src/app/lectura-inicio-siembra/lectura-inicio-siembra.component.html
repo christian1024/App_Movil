@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lectura Inicio Siembra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    ,
+    <ion-content fullscreen>
+      <form [formGroup]="IniciarSiembra">
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Plot Id</ion-label>
+            <ion-input type="number" name="Numplot" id="Numplot" formControlName="Numplot" (change)="PlotYarecibido()"></ion-input>
+            <ion-icon name="qr-code-outline" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Ubicacion</ion-label>
+            <ion-input type="number" name="Ubicacion" id="Ubicacion" formControlName="Ubicacion"></ion-input>
+            <ion-icon name="navigate" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Operario 1</ion-label>
+            <ion-input type="number" name="Operuno" id="Operuno" formControlName="Operuno"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Operario 2</ion-label>
+            <ion-input type="number" name="Operdos" id="Operdos" formControlName="Operdos"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Operario 3</ion-label>
+            <ion-input type="number" name="Opertres" id="Oper3" formControlName="Opertres"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <ion-item>
+            <ion-label position="floating">Operario 4</ion-label>
+            <ion-input type="number" name="OperCuatro" id="OperCuatro" formControlName="OperCuatro"></ion-input>
+            <ion-icon name="person" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card>
+          <section class="full-width">
+            <ion-button expand="full" color="success" (click)="GuardaIniciarSiembra()">GUARDAR</ion-button>
+          </section>
+        </ion-card>
+      </form>
+    </ion-content>
+  </ion-app>
+</ion-content>
